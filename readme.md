@@ -1,21 +1,30 @@
-# This repo is just a test repo for learning Git and Github
+# Learning Git with Upcase
 
-# 1
+This repo is just a test repo for learning Git and Github.
+https://thoughtbot.com/upcase/mastering-git
 
-testing more
+# Notes
 
-# 2
+## Merge
 
-# 3
+Fast-forward merge moves master to feature
 
-# FAQs
+`git merge --ff-only <feature>`
 
-## Why?
+## Rebase
 
-## How?
+If feature branch has commits but is behind master, rebase feature to master. Feature branch commits will be orphaned, but still accessible.
 
-## When?
+`git rebase master`
 
-## What?
+### Interactive rebase
 
-## Where?
+Interactive rebase is typically when feature branch is directly ahead of master. Take feature commits and squash down. It will use same tree ref as the unsquashed commits
+
+`git rebase --interactive master`
+
+## Stash
+
+Stash untracked files
+
+`git stash --include-untracked`
