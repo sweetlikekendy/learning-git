@@ -25,6 +25,22 @@ Interactive rebase is typically when feature branch is directly ahead of master.
 
 ## Stash
 
+Apply the last stash
+
+`git stash apply`
+
+Apply specific stash
+
+`git stash apply stash@{0}`
+
 Stash untracked files
 
 `git stash --include-untracked`
+
+Name stashes
+
+`git stash save "WIP: making progress on foo"`
+
+Start a new branch from stash
+
+`git stash branch <new-branch> stash@{0}`
