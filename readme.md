@@ -1,15 +1,21 @@
-hello world
+# This repo is just a test repo for learning Git and Github
 
-#1
+# 1
+
 testing more
 
-#2
+# 2
 
-#3
+# 3
 
-#FAQs
-##Why?
-##How?
-##When?
-##What?
-##Where?
+# FAQs
+
+## Why?
+
+## How?
+
+## When?
+
+## What?
+
+## Where?
