@@ -85,7 +85,8 @@ Start a new branch from stash
 
    To test this, you can run `git alias` and it should return
 
-   `mup = !git checkout main && git pull && git checkout - alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /`.
+   `mup = !git checkout main && git pull && git checkout - `
+   `alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /`
 
 6. To merge your branch with master, checkout to master, then run fast-forward merge.
 
