@@ -5,17 +5,17 @@ https://thoughtbot.com/upcase/mastering-git
 
 # Notes
 
-## Commits
-
-Push commits from local branch upstream. Create pull request on Github. Add initials to your branch.
-
-`git push -u origin storybook-styled-input:kn-storybook-styled-input`
-
 ## Merge
 
 Fast-forward merge moves master to feature
 
 `git merge --ff-only <feature>`
+
+## Push
+
+Push commits from local branch upstream. Create pull request on Github. Add initials to your branch.
+
+`git push -u origin storybook-styled-input:kn-storybook-styled-input`
 
 ## Rebase
 
