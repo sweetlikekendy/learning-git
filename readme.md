@@ -11,6 +11,12 @@ Fast-forward merge moves master to feature
 
 `git merge --ff-only <feature>`
 
+If commits are ahead of master and you need to pull a commits from master
+
+https://thoughtbot.com/upcase/videos/git-thoughtbot-git-flow 17:39
+
+`!git checkout master && git pull && git checkout -`
+
 ## Push
 
 Push commits from local branch upstream. Create pull request on Github. Add initials to your branch.
@@ -50,3 +56,44 @@ Name stashes
 Start a new branch from stash
 
 `git stash branch <new-branch> stash@{0}`
+
+# Example Work Flow
+
+Checkout a feature branch. You can specify the starting point.
+
+`git checkout -b <feature_branch> <starting_point_branch>`
+
+Once you've finished, stage and commit your changes in your local branch.
+
+When you're reading to push to Github, add your initials in front of your feature branch. This will tell other devs who worked on the branch just by looking at the name of the branch.
+
+`git push -u origin storybook-styled-input:kn-storybook-styled-input`
+
+Check to see if your local branch is up-to-date with master before pushing.
+
+`git checkout main && git pull && git checkout -`
+
+You can create a git alias for this by running `git config --global alias.mup '!git checkout main && git pull && git checkout -'` in your terminal.
+
+This will show up in the `~/.gitconfig` file as
+
+`mup = !git checkout main && git pull && git checkout -`
+
+To check your git aliases, add another alias
+
+`git config --global alias.mup 'git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /'`.
+
+To test this, you can run `git alias` and it should return
+
+`mup = !git checkout main && git pull && git checkout - alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /`.
+
+To merge your branch with master, checkout to master, then run fast-forward merge.
+
+`git checkout <master_branch>`
+`git merge -`
+
+After merging, push your changes (you should be in master branch).
+
+Finally, delete your feature branch.
+
+`git branch -d <feature_branch>`
