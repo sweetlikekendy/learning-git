@@ -65,7 +65,7 @@ Start a new branch from stash
 
 2. Once you've finished, stage and commit your changes in your local branch.
 
-3. When you're reading to push to Github, add your initials in front of your feature branch. This will tell other devs who worked on the branch just by looking at the name of the branch.
+3. When you're ready to push to Github, add your initials in front of your feature branch. This will tell other devs who worked on the branch just by looking at the name of the branch.
 
    `git push -u origin storybook-styled-input:kn-storybook-styled-input`
 
