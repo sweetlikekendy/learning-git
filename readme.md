@@ -91,7 +91,6 @@ This workflow ensures that we don't have an extra commit saying "Merge pull requ
 
     To test this, you can run `git alias` and it should return
 
-        [alias]
         mup = !git checkout main && git pull && git checkout -
 
         alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
