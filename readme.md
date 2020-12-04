@@ -95,7 +95,7 @@ Start a new branch from stash
 
    `git merge -`
 
-   Note: Using '-' means just use the previous branch.
+   **Note**: Using '-' means just use the previous branch.
 
 7. After merging, push your changes (you should be in master branch).
 
