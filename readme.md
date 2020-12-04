@@ -9,55 +9,59 @@ https://thoughtbot.com/upcase/mastering-git
 
 Fast-forward merge moves master to feature
 
-`git merge --ff-only <feature>`
+    `git merge --ff-only <feature>`
 
 If commits are ahead of master and you need to pull a commits from master
 
 https://thoughtbot.com/upcase/videos/git-thoughtbot-git-flow 17:39
 
-`!git checkout master && git pull && git checkout -`
+    `!git checkout master && git pull && git checkout -`
 
 ## Push
 
 Push commits from local branch upstream. Create pull request on Github. Add initials to your branch.
 
-`git push -u origin storybook-styled-input:kn-storybook-styled-input`
+    `git push -u origin storybook-styled-input:kn-storybook-styled-input`
 
 ## Rebase
 
 If feature branch has commits but is behind master, rebase feature to master. Feature branch commits will be orphaned, but still accessible.
 
-`git rebase master`
+    `git rebase master`
 
 ### Interactive rebase
 
 Interactive rebase is typically when feature branch is directly ahead of master. Take feature commits and squash down. It will use same tree ref as the unsquashed commits
 
-`git rebase --interactive master`
+    `git rebase --interactive master`
 
 ## Stash
 
 Apply the last stash
 
-`git stash apply`
+    `git stash apply`
 
 Apply specific stash
 
-`git stash apply stash@{0}`
+    `git stash apply stash@{0}`
 
 Stash untracked files
 
-`git stash --include-untracked`
+    `git stash --include-untracked`
 
 Name stashes
 
-`git stash save "WIP: making progress on foo"`
+    `git stash save "WIP: making progress on foo"`
 
 Start a new branch from stash
 
-`git stash branch <new-branch> stash@{0}`
+    `git stash branch <new-branch> stash@{0}`
 
 # Example Work Flow
+
+This workflow ensures that we don't have an extra commit saying "Merge pull request #2 from oxbld/kn-storybook-finishing-input". It'll keep things a bit cleaner.
+
+## Steps
 
 1. Checkout a feature branch. You can specify the starting point.
 
