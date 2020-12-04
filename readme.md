@@ -59,21 +59,21 @@ Start a new branch from stash
 
 # Example Work Flow
 
-Checkout a feature branch. You can specify the starting point.
+1. Checkout a feature branch. You can specify the starting point.
 
 `git checkout -b <feature_branch> <starting_point_branch>`
 
-Once you've finished, stage and commit your changes in your local branch.
+2. Once you've finished, stage and commit your changes in your local branch.
 
-When you're reading to push to Github, add your initials in front of your feature branch. This will tell other devs who worked on the branch just by looking at the name of the branch.
+3. When you're reading to push to Github, add your initials in front of your feature branch. This will tell other devs who worked on the branch just by looking at the name of the branch.
 
 `git push -u origin storybook-styled-input:kn-storybook-styled-input`
 
-Check to see if your local branch is up-to-date with master before pushing.
+4. Check to see if your local branch is up-to-date with master before pushing.
 
 `git checkout main && git pull && git checkout -`
 
-You can create a git alias for this by running `git config --global alias.mup '!git checkout main && git pull && git checkout -'` in your terminal.
+5. You can create a git alias for this by running `git config --global alias.mup '!git checkout main && git pull && git checkout -'` in your terminal.
 
 This will show up in the `~/.gitconfig` file as
 
@@ -87,13 +87,13 @@ To test this, you can run `git alias` and it should return
 
 `mup = !git checkout main && git pull && git checkout - alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /`.
 
-To merge your branch with master, checkout to master, then run fast-forward merge.
+5. To merge your branch with master, checkout to master, then run fast-forward merge.
 
 `git checkout <master_branch>`
 `git merge -`
 
-After merging, push your changes (you should be in master branch).
+6. After merging, push your changes (you should be in master branch).
 
-Finally, delete your feature branch.
+7. Finally, delete your feature branch.
 
 `git branch -d <feature_branch>`
