@@ -92,7 +92,10 @@ Start a new branch from stash
 6. To merge your branch with master, checkout to master, then run fast-forward merge.
 
    `git checkout <master_branch>`
+
    `git merge -`
+
+   Note: Using '-' means just use the previous branch.
 
 7. After merging, push your changes (you should be in master branch).
 
