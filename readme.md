@@ -75,11 +75,13 @@ This workflow ensures that we don't have an extra commit saying "Merge pull requ
 
         git push -u origin storybook-styled-input:kn-storybook-styled-input
 
-4.  Check to see if your local branch is up-to-date with master before pushing.
+4.  Check your pull request on Github. Write a short and concise description.
+
+5.  Check to see if your local branch is up-to-date with master before pushing.
 
         git checkout main && git pull && git checkout -
 
-5.  You can create a git alias for this by running `git config --global alias.mup '!git checkout main && git pull && git checkout -'` in your terminal.
+6.  You can create a git alias for this by running `git config --global alias.mup '!git checkout main && git pull && git checkout -'` in your terminal.
 
     This will show up in the `~/.gitconfig` file as
 
@@ -95,17 +97,17 @@ This workflow ensures that we don't have an extra commit saying "Merge pull requ
 
         alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 
-6.  To merge your branch with master, checkout to master, then run fast-forward merge.
+7.  To merge your branch with master, checkout to master, then run fast-forward merge.
 
         git checkout <master_branch>
         git merge -
 
     **Note**: Using '-' means just use the previous branch.
 
-7.  After merging, push your changes (you should be in master branch).
+8.  After merging, push your changes (you should be in master branch).
 
         git push
 
-8.  Finally, delete your feature branch.
+9.  Finally, delete your feature branch.
 
         git branch -d <feature_branch>
