@@ -61,39 +61,41 @@ Start a new branch from stash
 
 1. Checkout a feature branch. You can specify the starting point.
 
-`git checkout -b <feature_branch> <starting_point_branch>`
+   `git checkout -b <feature_branch> <starting_point_branch>`
 
 2. Once you've finished, stage and commit your changes in your local branch.
 
 3. When you're reading to push to Github, add your initials in front of your feature branch. This will tell other devs who worked on the branch just by looking at the name of the branch.
 
-`git push -u origin storybook-styled-input:kn-storybook-styled-input`
+   `git push -u origin storybook-styled-input:kn-storybook-styled-input`
 
 4. Check to see if your local branch is up-to-date with master before pushing.
 
-`git checkout main && git pull && git checkout -`
+   `git checkout main && git pull && git checkout -`
 
 5. You can create a git alias for this by running `git config --global alias.mup '!git checkout main && git pull && git checkout -'` in your terminal.
 
-This will show up in the `~/.gitconfig` file as
+   This will show up in the `~/.gitconfig` file as
 
-`mup = !git checkout main && git pull && git checkout -`
+   `mup = !git checkout main && git pull && git checkout -`
 
-To check your git aliases, add another alias
+   To check your git aliases, add another alias
 
-`git config --global alias.mup 'git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /'`.
+   `git config --global alias.mup 'git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /'`.
 
-To test this, you can run `git alias` and it should return
+   To test this, you can run `git alias` and it should return
 
-`mup = !git checkout main && git pull && git checkout - alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /`.
+   `mup = !git checkout main && git pull && git checkout - alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /`.
 
-5. To merge your branch with master, checkout to master, then run fast-forward merge.
+6. To merge your branch with master, checkout to master, then run fast-forward merge.
 
-`git checkout <master_branch>`
-`git merge -`
+   `git checkout <master_branch>`
+   `git merge -`
 
-6. After merging, push your changes (you should be in master branch).
+7. After merging, push your changes (you should be in master branch).
 
-7. Finally, delete your feature branch.
+   `git push`
 
-`git branch -d <feature_branch>`
+8. Finally, delete your feature branch.
+
+   `git branch -d <feature_branch>`
