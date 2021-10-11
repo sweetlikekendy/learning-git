@@ -30,11 +30,11 @@ Push commits from local branch upstream. Create pull request on Github. Add init
 If feature branch has commits but is behind master, rebase feature to master. Feature branch commits will be orphaned, but still accessible.
 
     git rebase master
-    
-    # On feature branch
-    git pull origin master --rebase
 
-    
+Another way to do it: 
+
+    # On feature branch
+    git pull origin master --rebase 
 
 ### Interactive rebase
 
