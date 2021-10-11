@@ -31,8 +31,8 @@ If feature branch has commits but is behind master, rebase feature to master. Fe
 
     git rebase master
     
-    ```# On feature branch
-    git pull origin master --rebase```
+    # On feature branch
+    git pull origin master --rebase
 
     
 
